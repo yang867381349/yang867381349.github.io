@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        num｜undefined
+        undefined
         
     </title>
 
@@ -137,7 +137,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>num</h1>
+                    <h1></h1>
                     
                     <span class="meta">
                          作者 John Doe
@@ -154,7 +154,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            num
+            
         </span>
     </div>
 </header>
@@ -165,7 +165,8 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h4 id="最为基础的放大镜的案例"><a href="#最为基础的放大镜的案例" class="headerlink" title="最为基础的放大镜的案例"></a>最为基础的放大镜的案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;放大镜&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        *&#123;</div><div class="line">            margin:0;</div><div class="line">            padding:0;</div><div class="line">        &#125;</div><div class="line">        .zuo&#123;</div><div class="line">            width: 430px;</div><div class="line">            height: 430px;</div><div class="line">            background:url(&quot;of.jpg&quot;)no-repeat;</div><div class="line">            float: left;</div><div class="line">            border:1px solid rebeccapurple;</div><div class="line">        &#125;</div><div class="line">        .div1&#123;</div><div class="line">            width: 215px;</div><div class="line">            height: 215px;</div><div class="line">            background:rgba(0,0,0,0.3);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        .div2&#123;</div><div class="line">            width: 430px;</div><div class="line">            height: 430px;</div><div class="line">            border:1px solid orangered;</div><div class="line">            float: left;</div><div class="line">            overflow:hidden;</div><div class="line">        &#125;</div><div class="line">        .you&#123;</div><div class="line">            width:860px;</div><div class="line">            height:860px;</div><div class="line">            /*background:url(&quot;of.jpg&quot;)no-repeat;*/</div><div class="line">            /*background-size:100%;*/</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class=&quot;zuo&quot;&gt;</div><div class="line">        &lt;div class=&quot;div1&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div class=&quot;div2&quot;&gt;&lt;div class=&quot;you&quot;&gt;&lt;/div&gt;&lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var ZUO = document.querySelector(&quot;.zuo&quot;);</div><div class="line">        var YOU = document.querySelector(&quot;.you&quot;);</div><div class="line">        var DIV1 = document.querySelector(&quot;.div1&quot;);</div><div class="line">        var DIV2 = document.querySelector(&quot;.div2&quot;);</div><div class="line">        ZUO.onmousemove = function(event)&#123;</div><div class="line">            var oevent = event || window.event;</div><div class="line">            var x = oevent.clientX;</div><div class="line">            var y = oevent.clientY;</div><div class="line">            var fun1 = x-parseInt(DIV1.offsetWidth/2);</div><div class="line">            var fun2 = parseInt(DIV1.offsetWidth/2);</div><div class="line">            var num1 = ZUO.offsetWidth;</div><div class="line">            var fun3 = DIV1.offsetWidth;</div><div class="line">            var fun4 = y-parseInt(DIV1.offsetHeight/2);</div><div class="line">            var fun5 = parseInt(DIV1.offsetHeight/2);</div><div class="line">            var num6 = ZUO.offsetHeight;</div><div class="line">            var fun7 = DIV1.offsetHeight;</div><div class="line">            var css2 = num1-fun3;</div><div class="line">            var css1 = num1-fun2;</div><div class="line">            var css3 = num6-fun7;</div><div class="line">            var css4 = num6-fun5;</div><div class="line">            console.log(css1);</div><div class="line">            console.log(x);</div><div class="line">            if(x &lt; fun2)&#123;</div><div class="line">                fun1 = 0;</div><div class="line">            &#125;else if(x &gt; css1)&#123;</div><div class="line">                fun1 = css2;</div><div class="line">            &#125;</div><div class="line">            if(y &lt; fun5)&#123;</div><div class="line">                fun4 = 0;</div><div class="line">            &#125;else if(y &gt; css4)&#123;</div><div class="line">                fun4 = css3;</div><div class="line">            &#125;</div><div class="line">            DIV1.style.marginLeft=fun1+&quot;px&quot;;</div><div class="line">            DIV1.style.marginTop=fun4+&quot;px&quot;;</div><div class="line">            var FPS1 = DIV1.style.marginLeft;</div><div class="line">            var FPS2 = DIV1.style.marginTop;</div><div class="line">            var jun1 = parseInt(FPS1);</div><div class="line">            var jun2 = parseInt(FPS2);</div><div class="line">            YOU.style.background=&quot;url(&apos;of.jpg&apos;)no-repeat &quot;+(-jun1*2)+&quot;px &quot;+(-jun2*2)+&quot;px&quot;;</div><div class="line">            YOU.style.backgroundSize=&quot;100%&quot;;</div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
                 <hr>
                 
 
@@ -187,7 +188,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#最为基础的放大镜的案例"><span class="toc-text">最为基础的放大镜的案例</span></a></li></ol>
                 </div>
             </div>
         </div>
