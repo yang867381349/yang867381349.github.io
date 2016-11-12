@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="GTX-TITAN-X" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        AJAX学习方案｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2016/11/12/AJAX学习方案/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    GTX-TITAN-X
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>AJAX学习方案</h1>
+                    
+                    <span class="meta">
+                         作者 七星泪脉
+                        <span>
+                          日期 2016-11-12
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            AJAX学习方案
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <ul>
+<li>AJAX分为三部分</li>
+</ul>
+<h1 id="第一部分是-HTTP请求"><a href="#第一部分是-HTTP请求" class="headerlink" title="第一部分是(HTTP请求)"></a>第一部分是(HTTP请求)</h1><ul>
+<li>http是计算机通过网络进行通信的规则</li>
+<li>实现客户端（浏览器）向服务器发起请求信息和服务</li>
+<li>是一种无状态协议</li>
+</ul>
+<h4 id="完整的http请求，通常需要7个步骤"><a href="#完整的http请求，通常需要7个步骤" class="headerlink" title="完整的http请求，通常需要7个步骤"></a>完整的http请求，通常需要7个步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.建立TCP链接</div><div class="line">2.web浏览器向web服务器发送请求命令</div><div class="line">3.web浏览器发送请求头信息</div><div class="line">4.web服务器应答</div><div class="line">5.web服务器发送应答头信息</div><div class="line">6.web服务器向web浏览器发送数据</div><div class="line">7.web服务器关闭TCP链接</div></pre></td></tr></table></figure>
+<h4 id="一个http请求一般由四部分组成"><a href="#一个http请求一般由四部分组成" class="headerlink" title="一个http请求一般由四部分组成"></a>一个http请求一般由四部分组成</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1.http请求的方法或动作，是get还是post</div><div class="line">2.请求的地址路径</div><div class="line">3.请求头，包含客户端环境的信息，身份验证等</div><div class="line">4.请求正文，也就是请求体，包含客户端提交的查询字符串信息，表单信息等</div></pre></td></tr></table></figure>
+<h2 id="一个http响应一般由三部分组成"><a href="#一个http响应一般由三部分组成" class="headerlink" title="一个http响应一般由三部分组成"></a>一个http响应一般由三部分组成</h2><h5 id="1-一个数字和文字组成的状态码，显示请求的状态，是成功还是失败"><a href="#1-一个数字和文字组成的状态码，显示请求的状态，是成功还是失败" class="headerlink" title="1.一个数字和文字组成的状态码，显示请求的状态，是成功还是失败"></a>1.一个数字和文字组成的状态码，显示请求的状态，是成功还是失败</h5><table>
+<thead>
+<tr>
+<th>http状态码由3位数字构成，其中首位数字定义了状态码的类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1xx:信息类，表示收到web浏览器请求，正在处理中</td>
+<td></td>
+</tr>
+<tr>
+<td> 2xx:表示成功，请求被正确接受</td>
+<td></td>
+</tr>
+<tr>
+<td> 3xx:重定向，表示请求没有成功，客户必须采取进一步的动作</td>
+<td></td>
+</tr>
+<tr>
+<td> 4xx:客户端错误，表示客户端请求有错误</td>
+<td></td>
+</tr>
+<tr>
+<td> 5xx:服务器错误，表示服务器不能完成对请求的处理。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="2-响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等"><a href="#2-响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等" class="headerlink" title="2.响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等"></a>2.响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等</h5><h5 id="3-响应正文，也就是响应体"><a href="#3-响应正文，也就是响应体" class="headerlink" title="3.响应正文，也就是响应体"></a>3.响应正文，也就是响应体</h5><h1 id="第二部分是异步的JavaScript和XML"><a href="#第二部分是异步的JavaScript和XML" class="headerlink" title="第二部分是异步的JavaScript和XML"></a>第二部分是异步的JavaScript和XML</h1><ul>
+<li>这里的第二部就不过多的去更大家分享（异步的JavaScript和XML）</li>
+<li>在此可以推荐大家去看一下红皮书<a href="http://www.chinastor.org/upload/2014-12/14122310427265.pdf" target="_blank" rel="external">JavaScript高级程序设计</a> </li>
+<li>其中XML不懂的可以去<a href="http://www.w3school.com.cn/xml/" target="_blank" rel="external">W3School</a>上面进行详细的浏览</li>
+</ul>
+<h1 id="第三部分是XMLHttpRequest对象"><a href="#第三部分是XMLHttpRequest对象" class="headerlink" title="第三部分是XMLHttpRequest对象"></a>第三部分是XMLHttpRequest对象</h1><h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">IE7+：</div><div class="line">var  iable = new XMLHttpRequest();</div><div class="line"></div><div class="line">IE5.5 IE6</div><div class="line">variable=new ActiveXObject(“Microsoft.XMLHTTP”);</div><div class="line">```                                                 </div><div class="line">   </div><div class="line">                                                  </div><div class="line">#### 发送请求</div></pre></td></tr></table></figure>
+<p>1、open(method,url,saync)<br>2、setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”)<br>3、send(string)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">                                                 </div><div class="line">#### 获取响应</div></pre></td></tr></table></figure></p>
+<p>1、responseText               获得字符串形式的响应数据。<br>2、responseXML                获得 XML 形式的响应数据。<br>3、status和statusText         获取成功和失败响应数据。<br>4、getAllResponseHeader()     获取所有的响应报头<br>5、getResponseHeader()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">####  事件  </div><div class="line"></div><div class="line">##### onreadystatechange</div></pre></td></tr></table></figure></p>
+<p>1、每当 readyState 属性改变时，就会调用该函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### readyState</div></pre></td></tr></table></figure></p>
+<p>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>        0: 请求未初始化，open方法还没有调用<br>        1: 服务器连接已建立，open方法还没有调用<br>        2: 请求已接收，接受到头信息<br>        3: 请求处理中<br>        4: 请求已完成，且响应已就绪<br>```                                                 </p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/07/25/hello-world/" data-toggle="tooltip" data-placement="top"
+                           title="Hello World">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一部分是-HTTP请求"><span class="toc-text">第一部分是(HTTP请求)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#完整的http请求，通常需要7个步骤"><span class="toc-text">完整的http请求，通常需要7个步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一个http请求一般由四部分组成"><span class="toc-text">一个http请求一般由四部分组成</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一个http响应一般由三部分组成"><span class="toc-text">一个http响应一般由三部分组成</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-一个数字和文字组成的状态码，显示请求的状态，是成功还是失败"><span class="toc-text">1.一个数字和文字组成的状态码，显示请求的状态，是成功还是失败</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等"><span class="toc-text">2.响应头，响应头和请求头一样包含了许多有用的信息，例如服务器类型，日期时间，内容类型，长度等</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-响应正文，也就是响应体"><span class="toc-text">3.响应正文，也就是响应体</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二部分是异步的JavaScript和XML"><span class="toc-text">第二部分是异步的JavaScript和XML</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三部分是XMLHttpRequest对象"><span class="toc-text">第三部分是XMLHttpRequest对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建对象"><span class="toc-text">创建对象</span></a></li></ol></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; GTX-TITAN-X 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>
