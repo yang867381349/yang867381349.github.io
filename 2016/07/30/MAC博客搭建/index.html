@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="知识的汇集">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="GTX" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        MAC博客搭建｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2016/07/30/MAC博客搭建/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    GTX
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>MAC博客搭建</h1>
+                    
+                    <span class="meta">
+                         作者 七星泪脉
+                        <span>
+                          日期 2016-07-30
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            MAC博客搭建
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="一、nade-js官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。"><a href="#一、nade-js官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。" class="headerlink" title="一、nade.js官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。"></a>一、<a href="https://nodejs.org/en/" target="_blank" rel="external">nade.js</a>官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。</h2><ul>
+<li>在终端上输入  node -v可以看出来版本号</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h2 id="二、先有一个gitHub账号一枚"><a href="#二、先有一个gitHub账号一枚" class="headerlink" title="二、先有一个gitHub账号一枚"></a>二、先有一个gitHub账号一枚</h2><ul>
+<li>至于gitHub账号怎么申请我就不说了（本人英语不好都搞出来一个账号了）</li>
+</ul>
+<h2 id="1、在你的账户图标左侧的加号用鼠标点击（new-repository）-创建一个自己的库"><a href="#1、在你的账户图标左侧的加号用鼠标点击（new-repository）-创建一个自己的库" class="headerlink" title="1、在你的账户图标左侧的加号用鼠标点击（new repository）[创建一个自己的库]"></a>1、在你的账户图标左侧的加号用鼠标点击（new repository）[创建一个自己的库]</h2><p><img src="http://d.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e796acf3b05d7912397dd8c2a.jpg" alt=""></p>
+<h2 id="2、-创建出来的库先在（Repository-name）框下-输入你的名字一定要记住名字后面一定要加-github-io-完整的样式是【用户名-github-io】"><a href="#2、-创建出来的库先在（Repository-name）框下-输入你的名字一定要记住名字后面一定要加-github-io-完整的样式是【用户名-github-io】" class="headerlink" title="2、 创建出来的库先在（Repository name）框下  输入你的名字一定要记住名字后面一定要加   github.io 完整的样式是【用户名+github.io】"></a>2、 创建出来的库先在（Repository name）框下  输入你的名字一定要记住名字后面一定要加   github.io 完整的样式是【用户名+github.io】</h2><p><img src="http://f.hiphotos.baidu.com/image/pic/item/10dfa9ec8a136327174c5a00988fa0ec08fac764.jpg" alt=""></p>
+<h2 id="3、-写好名字后就可以把下面的Initialize-this-repository-with-a-README字段前的小框框用鼠标打勾"><a href="#3、-写好名字后就可以把下面的Initialize-this-repository-with-a-README字段前的小框框用鼠标打勾" class="headerlink" title="3、 写好名字后就可以把下面的Initialize this repository with a README字段前的小框框用鼠标打勾"></a>3、 写好名字后就可以把下面的Initialize this repository with a README字段前的小框框用鼠标打勾</h2><p><img src="http://e.hiphotos.baidu.com/image/pic/item/e7cd7b899e510fb33b56eba4d033c895d1430cb1.jpg" alt="个人上传图片不可修改"></p>
+<hr>
+<hr>
+<hr>
+<h2 id="三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）"><a href="#三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）" class="headerlink" title="三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）"></a>三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）</h2><h4 id="前面的-就不要复制了，以免把大家搞混淆。"><a href="#前面的-就不要复制了，以免把大家搞混淆。" class="headerlink" title="前面的 $ 就不要复制了，以免把大家搞混淆。"></a>前面的 $ 就不要复制了，以免把大家搞混淆。</h4><ul>
+<li>$ npm install hexo-cli -g</li>
+</ul>
+<hr>
+<ul>
+<li>可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入</li>
+<li>npm install hexo –save</li>
+</ul>
+<hr>
+<ul>
+<li>然后你会看到命令行窗口刷了一大堆白字，下面我们来看一看Hexo是不是已经安装好了。 在命令行中输入</li>
+<li>hexo -v</li>
+<li>其中 -v是查看版本的。如果你看见版本号   如：3.2.0什么的   那么恭喜你安装成功了。这里我就不贴图了，软件是更新的不要因为和我的版本不一样就认为是错的</li>
+</ul>
+<hr>
+<h3 id="接下来是初始化你的这个文件夹"><a href="#接下来是初始化你的这个文件夹" class="headerlink" title="接下来是初始化你的这个文件夹"></a>接下来是初始化你的这个文件夹</h3><ul>
+<li>在终端继续输入这个命令</li>
+<li>hexo init</li>
+<li>再然后就输入下面的命令</li>
+<li>npm install</li>
+</ul>
+<h3 id="首次体验你的本地文件"><a href="#首次体验你的本地文件" class="headerlink" title="首次体验你的本地文件"></a>首次体验你的本地文件</h3><ul>
+<li>在终端输入</li>
+<li>hexo g</li>
+<li>其中hexo g   是读取本地文件</li>
+<li>hexo s</li>
+<li><p>hexo s      是生成本地预览会出现一下样式</p>
+</li>
+<li><p>INFO  Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.</p>
+</li>
+<li>复制上面的网站链接  在新的窗口打开就会看见你自己的本地博客<br><img src="https://xuanwo.org/imgs/opinion/hexo-first-time.png" alt=""></li>
+</ul>
+<h2 id="四、接下来配置文件"><a href="#四、接下来配置文件" class="headerlink" title="四、接下来配置文件"></a>四、接下来配置文件</h2><ul>
+<li>1、配置文件，首先我先把文件的内容对应的什么和大家说一下</li>
+<li><p>网站</p>
+</li>
+<li><p>参数    描述</p>
+</li>
+<li>title    网站标题</li>
+<li>subtitle    网站副标题</li>
+<li>description    网站描述</li>
+<li>author    您的名字</li>
+<li>language    网站使用的语言</li>
+<li>timezone    网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</li>
+<li><p>网址</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>url    网址     </li>
+<li>root    网站根目录     </li>
+<li>permalink    文章的 永久链接 格式    :year/:month/:day/:title/</li>
+<li>permalink_default    永久链接中各部分的默认值     </li>
+<li>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。</li>
+<li><p>目录</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>source_dir    资源文件夹，这个文件夹用来存放内容。    source</li>
+<li>public_dir    公共文件夹，这个文件夹用于存放生成的站点文件。    public</li>
+<li>tag_dir    标签文件夹    tags</li>
+<li>archive_dir    归档文件夹    archives</li>
+<li>category_dir    分类文件夹    categories</li>
+<li>code_dir    Include code 文件夹    `downloads/code</li>
+<li>i18n_dir    国际化（i18n）文件夹    :lang</li>
+<li>skip_render    跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。     </li>
+<li><p>文章</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>new_post_name    新文章的文件名称    :title.md</li>
+<li>default_layout    预设布局    post</li>
+<li>auto_spacing    在中文和英文之间加入空格    false</li>
+<li>titlecase    把标题转换为 title case    false</li>
+<li>external_link    在新标签中打开链接    true</li>
+<li>filename_case    把文件名称转换为 (1) 小写或 (2) 大写0</li>
+<li>render_drafts    显示草稿    false</li>
+<li>post_asset_folder    启动 Asset 文件夹    false</li>
+<li>relative_link    把链接改为与根目录的相对位址    false</li>
+<li>future    显示未来的文章    true</li>
+<li>highlight    代码块的设置     </li>
+<li><p>分类 &amp; 标签</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>default_category    默认分类    uncategorized</li>
+<li>category_map    分类别名     </li>
+<li>tag_map    标签别名     </li>
+<li><p>日期 / 时间格式</p>
+</li>
+<li><p>Hexo 使用 Moment.js 来解析和显示时间。</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>date_format    日期格式    MMM D YYYY</li>
+<li>time_format    时间格式    H:mm:ss</li>
+<li><p>分页</p>
+</li>
+<li><p>参数    描述    默认值</p>
+</li>
+<li>per_page    每页显示的文章量 (0 = 关闭分页功能)    10</li>
+<li>pagination_dir    分页目录    page</li>
+<li><p>扩展</p>
+</li>
+<li><p>参数    描述</p>
+</li>
+<li>theme    当前主题名称。值为false时禁用主题</li>
+<li>deploy    部署部分的设置</li>
+</ul>
+<p>###下面来看我给出的图片来配置一下<br><img src="http://h.hiphotos.baidu.com/image/pic/item/c2fdfc039245d688c3812997adc27d1ed21b2405.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这里要注意，在你创建出来的网页账号的时候会伴随着一个账户下的连接至于这个连接怎么找到的请看下面的贴图</div></pre></td></tr></table></figure>
+<p><img src="http://g.hiphotos.baidu.com/image/pic/item/472309f7905298220412b3f0deca7bcb0a46d4e4.jpg" alt=""><br> 这样就可以拿到连接了</p>
+<h2 id="最后一步就是发布"><a href="#最后一步就是发布" class="headerlink" title="最后一步就是发布"></a>最后一步就是发布</h2><h3 id="终端输入-hexo-d"><a href="#终端输入-hexo-d" class="headerlink" title="终端输入 hexo d"></a>终端输入 hexo d</h3><ul>
+<li>会弹出输入你账户的name名</li>
+<li>你就输入你登陆github的账号</li>
+<li>当你敲击Enter的时候还会提示你输入github的passwrod</li>
+<li>接下来也是相同操作把密码输入进去。</li>
+<li>在此如果错了你的网页账户不会同步出你的配置好的文件也就是你的网站</li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/07/30/AJAX学习方案/" data-toggle="tooltip" data-placement="top"
+                           title="AJAX学习方案">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、nade-js官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。"><span class="toc-text">一、nade.js官网点进去下载像QQ安装的步骤把它安装到自己的电脑上，具体安装步骤（看提示）。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、先有一个gitHub账号一枚"><span class="toc-text">二、先有一个gitHub账号一枚</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1、在你的账户图标左侧的加号用鼠标点击（new-repository）-创建一个自己的库"><span class="toc-text">1、在你的账户图标左侧的加号用鼠标点击（new repository）[创建一个自己的库]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、-创建出来的库先在（Repository-name）框下-输入你的名字一定要记住名字后面一定要加-github-io-完整的样式是【用户名-github-io】"><span class="toc-text">2、 创建出来的库先在（Repository name）框下  输入你的名字一定要记住名字后面一定要加   github.io 完整的样式是【用户名+github.io】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、-写好名字后就可以把下面的Initialize-this-repository-with-a-README字段前的小框框用鼠标打勾"><span class="toc-text">3、 写好名字后就可以把下面的Initialize this repository with a README字段前的小框框用鼠标打勾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）"><span class="toc-text">三、接下来把本地文件配置一下（选一个自己喜欢的文件放置目录，再通过终端来输入一下命令）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#前面的-就不要复制了，以免把大家搞混淆。"><span class="toc-text">前面的 $ 就不要复制了，以免把大家搞混淆。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接下来是初始化你的这个文件夹"><span class="toc-text">接下来是初始化你的这个文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首次体验你的本地文件"><span class="toc-text">首次体验你的本地文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、接下来配置文件"><span class="toc-text">四、接下来配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后一步就是发布"><span class="toc-text">最后一步就是发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#终端输入-hexo-d"><span class="toc-text">终端输入 hexo d</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; GTX 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>
