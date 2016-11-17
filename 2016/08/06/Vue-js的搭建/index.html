@@ -317,7 +317,7 @@
 <li><p>另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用。<br>下面就是双向绑定的图解</p>
 <p><img src="http://img.mukewang.com/566915470001456b16000850.jpg" alt=""></p>
 </li>
-<li><p>通过图解我们可以清晰的看到就像HelloWorld展示的那样，app.html是view层，app.js是model层，通过vue.js（使用v-model这个指令）完成中间的底层逻辑，实现绑定的效果。改变其中的任何一层，另外一层都会改变。<br>作者： GD_SeHun<br>链接：<a href="http://www.imooc.com/article/2688" target="_blank" rel="external">http://www.imooc.com/article/2688</a><br>来源：慕课网</p>
+<li><p>通过图解我们可以清晰的看到就像HelloWorld展示的那样，app.html是view层，app.js是model层，通过vue.js（使用v-model这个指令）完成中间的底层逻辑，实现绑定的效果。改变其中的任何一层，另外一层都会改变。</p>
 </li>
 </ul>
 <h3 id="二、-下面就可以按照我给大家开辟的搭建方式搭建Vue-js"><a href="#二、-下面就可以按照我给大家开辟的搭建方式搭建Vue-js" class="headerlink" title="二、 下面就可以按照我给大家开辟的搭建方式搭建Vue.js"></a>二、 下面就可以按照我给大家开辟的搭建方式搭建Vue.js</h3><p> <img src="http://c.hiphotos.baidu.com/image/pic/item/d01373f082025aafa654aef2f2edab64034f1aa0.jpg" alt=""></p>
@@ -331,10 +331,15 @@
 </ul>
 <p> <img src="http://g.hiphotos.baidu.com/image/pic/item/0e2442a7d933c89527c74642d81373f08202004a.jpg" alt=""></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">一、在此要注意的是什么。</div><div class="line">	1、大家的node.js版本是多少</div><div class="line">	2、npm的版本是多少</div><div class="line">二、不知道的估计占大多数，可通过下面的方法来查询node.js和npm的版本</div><div class="line">	1、node -v</div><div class="line">	2、npm -v</div></pre></td></tr></table></figure>
-<p> <code>当然现在先别急着复制命令就开始运行，可能你会在npm install 处卡住，这时你就要阅读下面的解释，为什么？？？</code></p>
-<h5 id="其查询版本就是版本不能低，node-js可以是V4-4-4，但是你的npm必须是高于3-1以上，但是中国境内的程序员想用npm-install-在终端上来下载npm，其方法可行度非常低，原因是什么，想必大多数的人都知道，是因为npm在国外，像我们国内的程序在下载上，受到了很大的限制，当然有一些人很有钱，掏钱买包年或者包月的VPN来翻墙下载。对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node-js中文官网"><a href="#其查询版本就是版本不能低，node-js可以是V4-4-4，但是你的npm必须是高于3-1以上，但是中国境内的程序员想用npm-install-在终端上来下载npm，其方法可行度非常低，原因是什么，想必大多数的人都知道，是因为npm在国外，像我们国内的程序在下载上，受到了很大的限制，当然有一些人很有钱，掏钱买包年或者包月的VPN来翻墙下载。对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node-js中文官网" class="headerlink" title="其查询版本就是版本不能低，node.js可以是V4.4.4，但是你的npm必须是高于3.1以上，但是中国境内的程序员想用npm install 在终端上来下载npm，其方法可行度非常低，原因是什么，想必大多数的人都知道，是因为npm在国外，像我们国内的程序在下载上，受到了很大的限制，当然有一些人很有钱，掏钱买包年或者包月的VPN来翻墙下载。对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node.js中文官网"></a>其查询版本就是版本不能低，node.js可以是V4.4.4，但是你的npm必须是高于3.1以上，但是中国境内的程序员想用npm install 在终端上来下载npm，其方法可行度非常低，原因是什么，想必大多数的人都知道，是因为npm在国外，像我们国内的程序在下载上，受到了很大的限制，当然有一些人很有钱，掏钱买包年或者包月的VPN来翻墙下载。对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接<a href="http://nodejs.cn/" target="_blank" rel="external">node.js中文官网</a></h5><p><img src="http://e.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313dc833a896c380cd790238dc3.jpg" alt=""></p>
+<h3 id="其查询版本就是版本不能低，node-js可以是V4-4-4，但是你的npm必须是高于3-1以上，原因是Vue-js搭建的时候需要npm在3-0以上，"><a href="#其查询版本就是版本不能低，node-js可以是V4-4-4，但是你的npm必须是高于3-1以上，原因是Vue-js搭建的时候需要npm在3-0以上，" class="headerlink" title="其查询版本就是版本不能低，node.js可以是V4.4.4，但是你的npm必须是高于3.1以上，原因是Vue.js搭建的时候需要npm在3.0以上，"></a>其查询版本就是版本不能低，node.js可以是V4.4.4，但是你的npm必须是高于3.1以上，原因是Vue.js搭建的时候需要npm在3.0以上，</h3><h5 id="对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node-js中文官网"><a href="#对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node-js中文官网" class="headerlink" title="对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接node.js中文官网"></a>对于我这个穷作者为大家推荐安装包模式的安装，其下载的链接<a href="http://nodejs.cn/" target="_blank" rel="external">node.js中文官网</a></h5><p><code>当然现在先别急着复制命令就开始运行，可能你会在npm install 处卡住，这时你就要阅读下面的解释，为什么？？？</code></p>
+<p>###想必大多数的人都知道，是因为npm在国外，像我们国内的电脑去下载国外的，受到了很大的限制，当然有的人，掏钱买包年或者包月的VPN来翻墙下载。</p>
+<ul>
+<li>另外我还给大家推荐一个淘宝镜像安装，这样的话可以加快我们的搭建，但是也有弊端。</li>
+<li>其弊端的问题在于国内镜像cnpm安装(会导致后面缺了很多依赖库)，所有这个淘宝镜像的安装我贴出来，但是不推荐大家安装</li>
+</ul>
+<p><img src="http://e.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313dc833a896c380cd790238dc3.jpg" alt=""></p>
 <blockquote>
-<p>下载安装后，大家就可以跳过npm install 这个步骤然后再执行下面的<code>npm run dev</code>命令了</p>
+<p>npm install 或者 cnpm install 运行完后大家就可以运行接下来的命令<code>npm run dev</code></p>
 </blockquote>
 <p>###奇迹的你们会发现我成功的搭建好了<br><img src="http://f.hiphotos.baidu.com/image/pic/item/2e2eb9389b504fc25048723cecdde71190ef6df0.jpg" alt=""></p>
 <h3 id="之后的组件和编写我会在后续更新-喵哩个咪！！！。"><a href="#之后的组件和编写我会在后续更新-喵哩个咪！！！。" class="headerlink" title="之后的组件和编写我会在后续更新~~~喵哩个咪！！！。"></a>之后的组件和编写我会在后续更新~~~喵哩个咪！！！。</h3>
