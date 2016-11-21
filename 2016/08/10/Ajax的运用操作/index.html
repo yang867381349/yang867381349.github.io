@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        Hello World | EJ
+        Ajax的运用操作 | EJ
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | EJ">
+    <meta property="og:title" content="Ajax的运用操作 | EJ">
     <meta property="og:description" content="知识的汇集">
     
      <!--[if lte IE 9]>
@@ -223,7 +223,7 @@
 		
 	
         <p class="article-headline-p">
-            Hello World
+            Ajax的运用操作
         </p>
     </div>
 
@@ -241,7 +241,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>七星泪脉</strong>
-        <span>Jul 25, 2016</span>
+        <span>Aug 10, 2016</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -276,21 +276,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hello World&url=http://yoursite.com//2016/07/25/hello-world/index.html&via=七星泪脉" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Ajax的运用操作&url=http://yoursite.com//2016/08/10/Ajax的运用操作/index.html&via=七星泪脉" target="_blank">
         <li class="mdl-menu__item">
             شارك على Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/07/25/hello-world/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/10/Ajax的运用操作/index.html" target="_blank">
         <li class="mdl-menu__item">
             شارك على Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=http://yoursite.com//2016/07/25/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Ajax的运用操作&url=http://yoursite.com//2016/08/10/Ajax的运用操作/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             شارك على Weibo
         </li>
@@ -302,16 +302,93 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<pre><code>一、先在登录页面js文件上写上Ajax的通用封装函数
+</code></pre><p>   1、Ajax的通用封装函数</p>
+<pre><code>function AJax(type,url,parm,callback){
+  if(type === &quot;GET&quot;){
+var xhr = new XMLHttpRequest();
+xhr.open(type,url);
+xhr.send();
+xhr.onreadystatechange = function(){
+  if(xhr.readyState === 4 &amp;&amp; xhr.status === 200){
+//doSometing
+var data = xhr.responseText;
 
+callback(data);
+      }
+}
+  }else{
+   var xhr = new XMLHttpRequest();
+xhr.open(type,url);
+
+xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);
+
+
+xhr.send(parm);
+xhr.onreadystatechange = function(){
+  if(xhr.readyState === 4 &amp;&amp; xhr.status === 200){
+//doSometing
+var data = xhr.responseText;
+
+callback(data);
+              }
+        }
+      }
+}
+</code></pre><p>   2、在通过js获取到form表单内部的元素</p>
+<pre><code>var btn = document.querySelector(&quot;#login .submit&quot;);//登录按钮
+var login_user = document.querySelector(&quot;#login .deng_zh input&quot;);// 账号输入框
+var login_pass = document.querySelector(&quot;#login .deng_mm input&quot;);// 密码输入框    
+</code></pre><p>   3、套用Ajax来写鼠标点击后触发的效果界面</p>
+<pre><code>btn.onclick=function () {
+  var user = login_user.value;
+  var pass = login_pass.value;
+   var data = `username=${user}&amp;password=${pass}`
+  AJax(&apos;post&apos;,&apos;/login&apos;,data,function (date) {
+console.log(data);
+var date = JSON.parse(date)
+console.log(date);
+if(date.success == &apos;0&apos;){
+  alert(date.info)
+  location.reload()
+}else{
+  location.href = &apos;/&apos;;
+     }
+  })
+}
+</code></pre><p>   4、下面是关于node.js基础上，和Express框架上，通过mongodb服务端来把数据给导入到客户端上，实现一个服务端响应多个客户</p>
+<pre><code>   可在index.js文件上引入mongoose
+   在引入之前写在终端上下载 $ npm install mongoose --save
+   var mongoose = require(&quot;mongoose&quot;);
+var db = mongoose.connect(&quot;mongodb://127.0.0.1/jyb&quot;);
+再将其模板写出:
+var userSchema = new mongoose.Schema({
+  user: String,
+  pass: String,
+  user_name: String,
+});
+var userModel = db.model(&quot;users&quot;,userSchema,&quot;users&quot;);
+
+可通过post的方法:
+router.post(&apos;/login&apos;, function(req, res, next){
+  var user= req.body.username;
+  var pass = req.body.password;
+  userModel.findOne({user: user,pass: pass},function (err,result) {
+if (result){
+req.session.user = user;
+return res.send({
+  success:&apos;1&apos;,
+  info: &quot;登陆成功&quot;
+})
+  }else{
+return res.send({
+  success:&apos;0&apos;,
+  info: &quot;用户名不存在或密码错误&quot;
+})
+  }
+  })
+});
+</code></pre>
 	
 	
 	
@@ -333,19 +410,19 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/07/25/放大镜/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            أحدث
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2016/08/06/Vue-js的搭建/" id="post_nav-older" class="next-content">
+            أقدم
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
         </div>
