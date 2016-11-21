@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        放大镜 | EJ
+        Web终端命令大全 | EJ
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="放大镜 | EJ">
+    <meta property="og:title" content="Web终端命令大全 | EJ">
     <meta property="og:description" content="知识的汇集">
     
      <!--[if lte IE 9]>
@@ -223,7 +223,7 @@
 		
 	
         <p class="article-headline-p">
-            放大镜
+            Web终端命令大全
         </p>
     </div>
 
@@ -241,7 +241,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>七星泪脉</strong>
-        <span>Jul 25, 2016</span>
+        <span>Aug 13, 2016</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -276,21 +276,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=放大镜&url=http://yoursite.com//2016/07/25/放大镜/index.html&via=七星泪脉" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Web终端命令大全&url=http://yoursite.com//2016/08/13/Web终端命令大全/index.html&via=七星泪脉" target="_blank">
         <li class="mdl-menu__item">
             شارك على Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/07/25/放大镜/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/13/Web终端命令大全/index.html" target="_blank">
         <li class="mdl-menu__item">
             شارك على Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=放大镜&url=http://yoursite.com//2016/07/25/放大镜/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Web终端命令大全&url=http://yoursite.com//2016/08/13/Web终端命令大全/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             شارك على Weibo
         </li>
@@ -302,95 +302,131 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h4 id="最为基础的放大镜的案例"><a href="#最为基础的放大镜的案例" class="headerlink" title="最为基础的放大镜的案例"></a>最为基础的放大镜的案例</h4><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;放大镜&lt;/title&gt;
-    &lt;style&gt;
-        *{
-            margin:0;
-            padding:0;
-        }
-        .zuo{
-            width: 430px;
-            height: 430px;
-            background:url(&quot;of.jpg&quot;)no-repeat;
-            float: left;
-            border:1px solid rebeccapurple;
-        }
-        .div1{
-            width: 215px;
-            height: 215px;
-            background:rgba(0,0,0,0.3);
-        }
+		<p>   1、mock.js</p>
+<pre><code>npm i mockjs --save   插件安装
+</code></pre><p>   2、苹果APP编程第三方矢量图标插件命令</p>
+<pre><code>npm install react-native-vector-icons --save  第一步
+npm install rnpm -g                           第二步
+rnpm link                                     第三步
+</code></pre><p>   3、swiper插件，可运用与苹果APP快速编写轮播图</p>
+<pre><code>npm i react-native-swiper --save        
+</code></pre><p>   4、苹果离线打包命令</p>
+<pre><code>watchman watch-del-all        
+</code></pre><p>   5、react-native 苹果APP 发布流程</p>
+<pre><code>   准备工作
+1.苹果开发者帐号一枚
+    https://developer.apple.com/
+2.蒲公英应用测试号一枚
+    https://www.pgyer.com/
+开发者中心
+1.登陆
+    点击 Certificates,IDs 和 Profiles
+2.Devices -&gt; ALL-&gt;添加设备UDID
+3.Identifiers -&gt; App IDs -&gt; 添加APP ID也就是bounld ID
+4.最下面 Provisioning Profiles -&gt; Distribution-&gt;添加描述文件－&gt;点击添加-&gt;Ad Hoc-&gt;继续-&gt;选中之前添加的App ID-&gt;继续－&gt;选中证书-&gt;继续－&gt;选择设备-&gt;继续-&gt;添加描述文件名称－进入到下载描述文件页，点击下载    
+</code></pre><p>   6、github下载</p>
+<pre><code>在链接前加上git clone 链接
+</code></pre><p>   7、先安装bower 经常使用就安装全局 -g        </p>
+<pre><code>npm i bower -g
+</code></pre><p>   8、引入Bootstrap线下文件</p>
+<pre><code>   bower install bootstrap        
 
-        .div2{
-            width: 430px;
-            height: 430px;
-            border:1px solid orangered;
-            float: left;
-            overflow:hidden;
-        }
-        .you{
-               width:860px;
-            height:860px;
-            /*background:url(&quot;of.jpg&quot;)no-repeat;*/
-            /*background-size:100%;*/
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;zuo&quot;&gt;
-        &lt;div class=&quot;div1&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;div2&quot;&gt;&lt;div class=&quot;you&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;script&gt;
-        var ZUO = document.querySelector(&quot;.zuo&quot;);
-        var YOU = document.querySelector(&quot;.you&quot;);
-        var DIV1 = document.querySelector(&quot;.div1&quot;);
-        var DIV2 = document.querySelector(&quot;.div2&quot;);
-            ZUO.onmousemove = function(event){
-            var oevent = event || window.event;
-            var x = oevent.clientX;
-            var y = oevent.clientY;
-            var fun1 = x-parseInt(DIV1.offsetWidth/2);    
-            var fun2 = parseInt(DIV1.offsetWidth/2);
-            var num1 = ZUO.offsetWidth;
-            var fun3 = DIV1.offsetWidth;
-            var fun4 = y-parseInt(DIV1.offsetHeight/2);
-            var fun5 = parseInt(DIV1.offsetHeight/2);
-            var num6 = ZUO.offsetHeight;
-            var fun7 = DIV1.offsetHeight;
-            var css2 = num1-fun3;
-            var css1 = num1-fun2;
-            var css3 = num6-fun7;
-            var css4 = num6-fun5;
-            console.log(css1);
-            console.log(x);
-            if(x &lt; fun2){
-                fun1 = 0;
-            }else if(x &gt; css1){
-                fun1 = css2;
-            }
-            if(y &lt; fun5){
-                fun4 = 0;
-            }else if(y &gt; css4){
-                fun4 = css3;
-            }
-            DIV1.style.marginLeft=fun1+&quot;px&quot;;
-            DIV1.style.marginTop=fun4+&quot;px&quot;;
-            var FPS1 = DIV1.style.marginLeft;
-            var FPS2 = DIV1.style.marginTop;
-            var jun1 = parseInt(FPS1);
-            var jun2 = parseInt(FPS2);
-            YOU.style.background=&quot;url(&apos;of.jpg&apos;)no-repeat &quot;+(-jun1*2)+&quot;px &quot;+(-jun2*2)+&quot;px&quot;;
-            YOU.style.backgroundSize=&quot;100%&quot;;
-        }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-//yangjunquan
+   引入本地的         bootstrap.min.css    文件   1、css
+引入本地的         jquery.min.js        文件   2、jq
+引入本地的         bootstrap.min.js     文件   3、js
+一定要注意顺序排列
+</code></pre><p>   9、Express其中index.js文件样式写法</p>
+<pre><code>   router.get(&apos;/&apos;, function(req, res, next) {
+  res.render(&apos;index&apos;, { title: &apos;我的首页&apos;,cssPath:&quot;/stylesheets/test.css&quot; });
+});
+   在文件routes文件下的index.js 文件写法其中
+   cssPath意思是把stylesheets文件下的test.css文件样式读取的
+   render的第一个参数（是http://后面附加的二级页面）
+</code></pre><p>   10、node.js 文件更新监控(其效果就是不用写好新的内容还要关闭node.js，再重启node.js)</p>
+<pre><code>进入自己的项目文件夹后，命令行输入
+sudo npm  install supervisor  -g
+</code></pre><p>   11、数据库命令的操作</p>
+<pre><code>show dbs    列表数据库
+use         创建一个数据库
+db.名字.insert({&quot;数据&quot;:&quot;数据内容&quot;})      在当前数据库下写数据
+db.名字.find()                         查看数据内容，其id是编码
+db.名字.find({&quot;数据名&quot;:&quot;数据内容&quot;})      数据内增加内容
+进入数据库删除数据        
+</code></pre><p>   12、终端操作命令</p>
+<pre><code>   ls 参数 目录名 
+例: 想看看跟目录下有什么， 
+ls / 
+想看看驱动目录下有什么， 
+ls /System/Library/Extensions 
+参数 -w 显示中文，-l 详细信息， -a 包括隐藏文件 
+转换目录 
+cd 
+例：想到驱动目录下溜达一圈 
+cd /System/Library/Extensions 
+建立新目录 
+mkdir 目录名 
+例：在驱动目录下建一个备份目录 backup 
+mkdir /System/Library/Extensions/backup 
+在桌面上建一个备份目录 backup 
+mkdir /User/用户名/Desktop/backup 
+拷贝文件 
+cp 参数 源文件 目标文件 
+例：想把桌面的Natit.kext 拷贝到驱动目录中 
+cp -R /User/用户名/Desktop/Natit.kext /System/Library/Extensions 
+参数R表示对目录进行递归操作，kext在图形界面下看起来是个文件，实际上是个文件夹。 
+把驱动目录下的所有文件备份到桌面backup 
+cp -R /System/Library/Extensions/* /User/用户名/Desktop/backup 
+删除文件 
+rm 参数 文件 
+例：想删除驱动的缓存 
+rm -rf /System/Library/Extensions.kextcache 
+rm -rf /System/Library/Extensions.mkext 
+参数－rf 表示递归和强制，千万要小心使用，如果执行了 rm -rf / 你的系统就全没了 
+
+移动文件 
+mv 文件 
+例：想把AppleHDA.Kext 移到桌面 
+mv /System/Library/Extensions/AppleHDA.kext /User/用户名/Desktop 
+想把AppleHDA.Kext 移到备份目录中 
+mv /System/Library/Extensions/AppleHDA.kext /System/Library/Extensions/backup 
+更改文件权限 
+chmod 参数 权限 文件 
+例：把驱动目录下所有文件设定到root读写，其他用户只读 
+chmod -R 755 /System/Library/Extensions 
+参数R 表示递归，755表示各用户的权限 
+更改文件属主 
+chown 参数 用户:组 文件 
+例：把驱动目录下的所有文件属主改成根用户 
+chown -R root:wheel /System/Library/Extensions 
+参数R 表示递归操作 
+修复整个系统中文件的权限 
+diskutil repairpermissions / 
+严格的说这不是一个unix 命令，而是osx一个软件，记得修改或添加的驱动就执行一次。 
+文本编辑 
+nano 文件名 
+例：编辑natit Info.plist 
+nano /System/Library/Extensions/Natit.kext/Info.plist 
+编辑完成后 用 Ctrl ＋O 存盘，Ctrl＋X 退出
+-o       后面要解析到文件目录
+-O       要导入的数据给导入进去
+pwd      显示你当前的位置目录，是绝对文件目录
+./       是同级目录下
+cd ../   是返回上一级
+cd ..    是返回上一级
+ls       是目录列表
+-w       是时时更新某个（例如:jade sass less）文件
+-p       是转译jade文件不让其生成后是压缩的样式
+sass --watch 是编译sass文件
+
+
+小技巧 
+用 Tab 键自动补齐命令 
+比如想到 /System 目录中去，输入 cd /Sy 然后按一下Tab 键，命令就会自动补齐成 cd /System 
+操作带名字中带有空格的文件和目录 
+空格在命令中写成 空格， 比如要进入 My Documents，命令为 cd My Documents 
+查看命令的详细帮助 
+man 命令名 
+比如要看看 ls 命令的详细用法，执行 man ls 
 </code></pre>
 	
 	
@@ -413,21 +449,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/07/30/AJAX学习方案/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            أحدث
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/07/25/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2016/08/10/Ajax的运用操作/" id="post_nav-older" class="next-content">
             أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
